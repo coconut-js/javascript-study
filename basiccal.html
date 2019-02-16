@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="acc.css">
+    <script src="cal.js"></script>
+    <title>Bcal</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2">
+                <input type="text" id="A">
+            </td>
+            <td colspan="2">
+                <input type="text" id="B">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="result">
+            </td>
+        </tr>
+        <tr>
+            <td onclick="add()" class="but">+</td>
+            <td onclick="sub()" class="but">-</td>
+            <td onclick="mul()" class="but">*</td>
+            <td onclick="divide()" class="but">/</td>
+        </tr>
+        <tr>
+            <td colspan="4" id="clear">clear</td>
+        </tr>
+
+    </table>
+
+    <script>
+        var element = document.getElementsByClassName('but');
+
+        function myfunction1() {
+            console.log(this);
+            this.classList.add('tdhover');
+        }
+        
+        for (i = 0; i < element.length; i++) {
+            element[i].addEventListener('mousedown', myfunction1);
+        }
+        
+
+        function myfunction2() {
+            this.classList.remove('tdhover');
+        }
+
+        for (i = 0; i < element.length; i++) {
+            element[i].addEventListener('mouseup', myfunction2);
+        }
+        
+        var clears = document.getElementById("clear");
+        clears.addEventListener('mousedown',function(){
+            this.classList.add('tdhover');
+        })
+        clears.addEventListener('mouseup',function(){
+            this.classList.remove('tdhover');
+            clear();
+        })
+        
+    </script>
+</body>
+
+</html>

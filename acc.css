@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+input{
+    border: none;
+    text-align: right;
+}
+
+input:focus{
+    border: none;
+}
+
+.tdhover{
+    background-color: blue;     
+}
